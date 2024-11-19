@@ -14,9 +14,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="order" element={<TeaOrder />} /> 
-          <Route path="types" element={<Types />} /> {/* Add Types route */}
-          <Route path="feedback" element={<Feedback />} /> {/* Add Feedback route */}
+          <Route path="/order" element={<TeaOrder />} /> 
+          <Route path="/types" element={<Types />} /> {/* Add Types route */}
+          <Route path="/feedback" element={<Feedback />} /> {/* Add Feedback route */}
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

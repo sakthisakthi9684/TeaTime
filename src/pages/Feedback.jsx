@@ -1,53 +1,29 @@
-// pages/Feedback.js
-import React, { useState } from "react";
+import React from "react";
 
 function Feedback() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Here you can handle the form submission logic, e.g., sending the data to an API
-    console.log("Feedback submitted:", { name, email, message });
-    // Reset the form after submission
-    setName("");
-    setEmail("");
-    setMessage("");
-  };
-
   return (
-    <div className="flex items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: `url(../assets/tea.jpeg)` }}>
-      <div className="bg-white bg-opacity-75 p-8 rounded-lg shadow-lg text-center">
-        <h2 className="text-2xl font-bold mb-4">Feedback</h2>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            placeholder="Your Name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-          <input
-            type="email"
-            placeholder="Your Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded"
-            required
-          />
-          <textarea
-            placeholder="Your Feedback"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            className="w-full p-2 border border-gray-300 rounded"
-            rows="4"
-            required
-          />
+    <div className="page feedback bg-teal-100 min-h-screen flex items-center justify-center">
+      <div className="bg-white shadow-lg rounded-lg p-8 max-w-md text-center">
+        <h2 className="text-2xl font-bold text-teal-700 mb-4">Feedback</h2>
+        <p className="text-teal-600 mb-6">
+          We value your feedback! Let us know your thoughts about our tea.
+        </p>
+        <form className="space-y-4">
+          {/* Feedback Textarea */}
+          <div>
+            <label className="block text-left text-teal-700 font-medium mb-1">
+              Your Feedback
+            </label>
+            <textarea
+              placeholder="Share your feedback here..."
+              className="w-full border border-teal-300 rounded-lg py-2 px-3 text-teal-700 focus:ring-2 focus:ring-teal-500 focus:outline-none"
+              rows="4"
+            />
+          </div>
+          {/* Submit Button */}
           <button
             type="submit"
-            className="px-6 py-2 bg-green-700 text-white rounded hover:bg-green-600 transition duration-300 ease-in-out"
+            className="bg-teal-700 text-white py-2 px-4 w-full rounded-lg hover:bg-teal-800 transition duration-300"
           >
             Submit Feedback
           </button>
