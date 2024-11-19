@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -9,10 +10,11 @@ function Home() {
           Discover the joy of tea, explore different types, and place your order
           now!
         </p>
-
+        <Link to ={"/register"}>
         <button className="px-6 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition">
           Explore More
         </button>
+        </Link>
       </div>
     </div>
   );
